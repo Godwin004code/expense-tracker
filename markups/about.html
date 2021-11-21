@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style/expense.css">
+    <title>About</title>
+    <style>
+        .about-container {
+            width: 90%;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        p::first-letter {
+            color: #8f00ff;
+            font-size: 1.5rem;
+        }
+        .back-btn a i {
+            position: absolute;
+            top: 1%;
+            left: 0;
+            font-size: 1.5rem;
+        }
+        .fa-lightbulb-o {
+            
+            position: absolute;
+            right: 2%;
+            top: .5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="back-btn">
+        <a href="/index.html">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+    </div>
+    <div class="dark-mode" style="font-size: 2rem;">
+        <i class="fa fa-lightbulb-o"></i>
+    </div>
+    <div class="about-container">
+        <h1>Rastreador</h1>
+        <p>
+        Rastreador is a website created by Godwin to help the user keep of their expenses. Don't bother yourself about the total value you inputed <a href="viewexpense.html">here</a> because the values have been persisted to local storage so even if you refresh, your inputs will still be there..
+    </p>
+    <p>
+        A better version of this will be released soon
+    </p>
+    </div>
+    <script src="/scripts/toggle.js"></script>
+</body>
+</html>

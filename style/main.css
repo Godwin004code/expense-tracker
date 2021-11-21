@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header .header {
+  padding: 1.2rem 0 0 0;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .header h1 {
+  color: #8f00ff;
+}
+
+header .header nav {
+  width: 40%;
+}
+
+header .header nav .btns {
+  display: none;
+}
+
+header .header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .header nav ul li {
+  list-style: none;
+}
+
+header .header nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+header .header nav ul li:nth-child(4) .submenu {
+  display: none;
+}
+
+header .header nav ul li:nth-child(4) .submenu ul {
+  display: block;
+}
+
+header .header nav ul li:nth-child(4) .submenu ul li a {
+  color: white;
+}
+
+header .header nav ul li:nth-child(4) .submenu.show-submenu {
+  display: block;
+}
+
+#hero img {
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ban {
+  top: 68%;
+}
+
+.ban button {
+  border: 0;
+  padding: .4rem .5rem;
+  background-color: #8f00ff;
+  border-radius: 10px;
+  transition: transform 1s ease;
+}
+
+.ban button:active {
+  transform: scaleX(0.2);
+}
+
+.ban button h3 a {
+  color: white;
+  text-decoration: none;
+}
+
+.ban p {
+  margin-top: 1rem;
+  font-weight: bolder;
+  color: white;
+}
+
+.fa-remove {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 768px;
+    max-width: 100%;
+  }
+  .fa-remove {
+    display: none;
+  }
+  header .header nav {
+    transition: all 2s ease;
+  }
+  header .header nav .btns {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 40%;
+  }
+  header .header nav .btns i {
+    color: white;
+    font-size: 20px;
+  }
+  header .header nav ul {
+    display: none;
+  }
+  header .header nav.show-nav {
+    transition: all 2s ease;
+  }
+  header .header nav.show-nav ul {
+    display: block;
+    height: 100vh;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+  }
+  header .header nav.show-nav ul li {
+    line-height: 5;
+  }
+  header .header nav.show-submenu .submenu {
+    max-height: 0;
+    height: 200px;
+  }
+  header .header nav.show-submenu .submenu ul {
+    position: absolute;
+  }
+  header .header nav.show-nav .submenu li {
+    line-height: 0;
+  }
+  header .header nav.show-nav .fa-remove {
+    display: block;
+    color: white;
+    font-size: 1.8rem;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+  }
+  header .header nav.show-nav .fa-bars {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

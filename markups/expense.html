@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style/expense.css">
+    <title>Expense App</title>
+    <style>
+        
+        .dark-mode {
+            margin-right: 1rem;
+        }
+        .save {
+            width: 100%;
+            text-align: center;
+            margin-top: 6rem;
+            margin-bottom: 2rem;
+        }
+        .save #view {
+            padding: .3rem .2rem;
+            transition: transform  2s ease;
+        }
+        #view:active {
+            transform: scaleX(.2);
+        }
+        #view a {
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .back-btn a i {
+            position: absolute;
+            top: 1%;
+            left: 0;
+            font-size: 1.5rem;
+        }
+        .fa-lightbulb-o {
+            
+            position: absolute;
+            right: 2%;
+            top: .5%;
+        }
+        h2 {
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-top: 0;
+            text-align: center;
+        }
+                .btna {
+            text-align: center;
+        }
+        #save {
+            background-color: #8f00ff;
+            border: 0;
+            border-radius: 4px;
+            color: white;
+        }
+        .o-total {
+            width: 100%;
+            
+            display: flex;
+            justify-content: center;
+        }
+       
+    </style>
+</head>
+<body>
+    
+        <div class="head">
+            <div class="back-btn">
+                <a href="/index.html">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+            </div>
+            <h2>Save your expenses here</h2>
+            <div class="dark-mode" style="font-size: 2rem;">
+                <i class="fa fa-lightbulb-o"></i>
+            </div>
+        </div>
+    
+    <div class="expense-container">
+        <form>
+            <div class="product">
+                <input type="text" id="text">
+                <div class="text-txt ">
+                    This field is empty
+                </div>
+            </div>
+            <div class="product-amount">
+                <input type="number" id="amount">
+                <p class="amount-txt">
+                    This field is empty
+                </p>
+            </div>
+            <div class="product-date">
+                <input type="date" id="date">
+            </div>
+            <div class="product-time">
+                <input type="time" id="time">
+            </div>
+            <div class="flex">
+                <button id="save">Save</button>
+                <div class="box"></div>
+            </div>
+        </form>
+        <table border="1px">
+            <thead>
+             <tr>
+                <th>ITEM</th>
+                <th>AMOUNT</th>
+                <th>DATE</th>
+                <th>TIME</th>
+                <th>OPTIONS</th>
+             </tr>
+            </thead>
+            <tbody></tbody>
+            
+        </table>
+        <div class="o-total"><h1>TOTAL:</h1><h1 class="total">0</h1></div>
+        <div class="modal">
+        <div class="modal-container">
+            <h2 id="review">SEE REVIEW</h2>
+        </div>
+        <button class="open-modal">
+            <i class="fa fa-edit"></i>
+        </button>
+        <button class="close-modal">
+            <i class="fa fa-close"></i>
+        </button>
+    </div>
+    </div>
+    <div class="save">
+        <button id="view"><a href="/markups/viewexpense.html">
+            Click here to save and view all your expenses!
+        </a></button>
+    </div>
+    <script src="/scripts/expense.js"></script>
+    <script src="/scripts/toggle.js"></script>
+</body>
+</html>
